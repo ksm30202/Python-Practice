@@ -1,21 +1,36 @@
-import random
-
-# 1~ 100 임의의 숫자를 맞추시오
+# 사람별 평균 구하기
 
 def main():
-    ran_num = random.randint(1,100)
-    input_num = int(input("숫자를 입력하세요."))
+    kor_score = [49, 79, 20, 100, 80]
+    math_score = [43, 59, 85, 30, 90]
+    eng_score = [42, 79, 48, 60, 100]
+    midterm_score = [kor_score, math_score, eng_score]
+    total_score = [0,0,0,0,0]
+    index = 0
 
-    while(input_num is not ran_num):
-        if(input_num > ran_num):
-            print("입력한 숫자가 큽니다.")
-        else:
-            print("입력한 숫자가 작습니다.")
-        input_num = int(input())
-    else: print("정답 입력한 숫자 ", input_num);
+    for scores in midterm_score:
+        for value in scores:            
+            total_score[index] += value
+            print(total_score)
+            index += 1
+        index = 0
+    print(total_score)
 
 
 
+    
+
+        # avg = int(midterm_score[i][i] + midterm_score[i+1][i] + midterm_score[i+2][i])/3
+        # if(i == 0):
+        #     print("A의 평균은 : ", avg)
+        # elif(i == 1):
+        #     print("B의 평균은 : ", avg)
+        # elif(i == 2):
+        #     print("C의 평균은 : ", avg)
+        # elif(i == 3):
+        #     print("D의 평균은 : ", avg)
+        # else:
+        #     print("E의 평균은 : ", avg)
 
 
 if __name__ == '__main__':
