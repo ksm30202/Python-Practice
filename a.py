@@ -1,8 +1,22 @@
-print("본 프로그램은 섭씨를 화씨로 변환하는 프로그램입니다.")
-print("변환하고 싶은 섭씨 온도를 입력해주세요!")
+import random
 
-user_input = float(input())
+# 1~ 100 임의의 숫자를 맞추시오
 
-change = ((9/5) * user_input) + 32
+def main():
+    ran_num = random.randint(1,100)
+    input_num = int(input("숫자를 입력하세요."))
 
-print(change)
+    while(input_num is not ran_num):
+        if(input_num > ran_num):
+            print("입력한 숫자가 큽니다.")
+        else:
+            print("입력한 숫자가 작습니다.")
+        input_num = int(input())
+    else: print("정답 입력한 숫자 ", input_num);
+
+
+
+
+
+if __name__ == '__main__':
+    main()

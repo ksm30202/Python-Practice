@@ -55,7 +55,7 @@ class TestResult(unittest.TextTestResult):
 
 loader = unittest.loader.defaultTestLoader
 null_stream = open(os.devnull, "w")
-test_suite = loader.discover('.', '*_unit_test.py', None)
+test_suite = loader.discover('.', 'unit_test_*.py', None)
 result = unittest.TextTestRunner(
     stream=null_stream, verbosity=2, resultclass=TestResult).run(test_suite)
 

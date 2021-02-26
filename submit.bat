@@ -7,5 +7,5 @@ set tmp="%1"
 if "%tmp:"=.%"==".." (
     echo "Please give hash key as argument."
 ) else (
-    backend.ai run --exec "python test.py basic_operations.py %tmp%" python3 test.py basic_operations.py basic_opeartions_unit_test.py
+    backend.ai run --exec "python test.py exam_grader.py %tmp%" python3 test.py exam_grader.py unit_test_exam_grader.py
 )
